@@ -1,0 +1,318 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RepoExplorer</name>
+    </assembly>
+    <members>
+        <member name="T:RepoExplorer.AccessTokenLogin">
+            <summary>
+            AccessToken Login
+            </summary>
+        </member>
+        <member name="M:RepoExplorer.AccessTokenLogin.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:RepoExplorer.AccessTokenLogin"/> class.
+            </summary>
+        </member>
+        <member name="F:RepoExplorer.AccessTokenLogin.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:RepoExplorer.AccessTokenLogin.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:RepoExplorer.AccessTokenLogin.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:RepoExplorer.AddObject">
+            <summary>
+            Adding new object
+            </summary>
+        </member>
+        <member name="M:RepoExplorer.AddObject.#ctor(RepoExplorer.MainFileExplorer)">
+            <summary>
+            Initializes a new instance of the <see cref="T:RepoExplorer.AddObject"/> class.
+            </summary>
+            <param name="mainFileExplorer">Main file explorer object</param>
+        </member>
+        <member name="F:RepoExplorer.AddObject.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:RepoExplorer.AddObject.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:RepoExplorer.AddObject.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:RepoExplorer.InputPortNumber">
+            <summary>
+            Logic for connecting to worker
+            </summary>
+        </member>
+        <member name="M:RepoExplorer.InputPortNumber.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:RepoExplorer.InputPortNumber"/> class.
+            </summary>
+        </member>
+        <member name="F:RepoExplorer.InputPortNumber.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:RepoExplorer.InputPortNumber.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:RepoExplorer.InputPortNumber.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:RepoExplorer.Login">
+            <summary>
+            Login using username and password
+            </summary>
+        </member>
+        <member name="M:RepoExplorer.Login.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:RepoExplorer.Login"/> class.
+            </summary>
+        </member>
+        <member name="F:RepoExplorer.Login.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:RepoExplorer.Login.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:RepoExplorer.Login.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:RepoExplorer.MainFileExplorer">
+            <summary>
+            Main File Explorer Logic
+            </summary>
+        </member>
+        <member name="M:RepoExplorer.MainFileExplorer.#ctor(DoubleTake.Orchestrator.Client.IClientContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:RepoExplorer.MainFileExplorer"/> class.
+            </summary>
+            <param name="context">Represents a context for communicating with a Web API host.</param>
+        </member>
+        <member name="P:RepoExplorer.MainFileExplorer.HttpClient">
+            <summary>
+            Gets or sets the http client
+            </summary>
+        </member>
+        <member name="P:RepoExplorer.MainFileExplorer.ClientContext">
+            <summary>
+            Gets or sets the ClientContext
+            </summary>
+        </member>
+        <member name="P:RepoExplorer.MainFileExplorer.SelectedNode">
+            <summary>
+            Gets or sets the SelectedNode
+            </summary>
+        </member>
+        <member name="M:RepoExplorer.MainFileExplorer.GetUri(System.String,System.String)">
+            <summary>
+            setting up the uri
+            </summary>
+            <param name="baseUrl">base url</param>
+            <param name="repoPathId">repo path details</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:RepoExplorer.MainFileExplorer.GetFullPath(System.Windows.Forms.TreeNode)">
+            <summary>
+            Get the fullpath of the selected node with / separated
+            </summary>
+            <param name="selectedNode">selected node from a tree view</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:RepoExplorer.MainFileExplorer.HandleExpansion(System.Windows.Forms.TreeNode,System.String)">
+            <summary>
+            Fetch the sub repositories of the selected node
+            </summary>
+            <param name="expandedNode">expanded node</param>
+            <param name="repoPath">repo path</param>
+            <returns>void</returns>
+        </member>
+        <member name="M:RepoExplorer.MainFileExplorer.SendRequest(System.String)">
+            <summary>
+            Sending the request
+            </summary>
+            <param name="uri">full url for sending request</param>
+            <returns>string</returns>
+        </member>
+        <member name="M:RepoExplorer.MainFileExplorer.HandleSelection(System.String)">
+            <summary>
+            Fetch the selected repository object in text format
+            </summary>
+            <param name="repoPath">repo path</param>
+            <returns>void</returns>
+        </member>
+        <member name="F:RepoExplorer.MainFileExplorer.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:RepoExplorer.MainFileExplorer.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:RepoExplorer.MainFileExplorer.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:RepoExplorer.NewRepoObjectPath">
+            <summary>
+            Adding the object data
+            </summary>
+        </member>
+        <member name="M:RepoExplorer.NewRepoObjectPath.#ctor(System.String,System.String,RepoExplorer.MainFileExplorer)">
+            <summary>
+            Initializes a new instance of the <see cref="T:RepoExplorer.NewRepoObjectPath"/> class.
+            </summary>
+            <param name="repoPath">repoPath for auto populating the object path</param>
+            <param name="objectData">object data which needs to be added</param>
+            <param name="fileExplorer">Main file explorer object</param>
+        </member>
+        <member name="F:RepoExplorer.NewRepoObjectPath.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:RepoExplorer.NewRepoObjectPath.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:RepoExplorer.NewRepoObjectPath.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:RepoExplorer.Program">
+            <summary>
+            Start
+            </summary>
+        </member>
+        <member name="M:RepoExplorer.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+        <member name="T:RepoExplorer.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:RepoExplorer.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:RepoExplorer.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:RepoExplorer.Properties.Resources.Home">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:RepoExplorer.Properties.Resources.Login_Image">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:RepoExplorer.Properties.Resources.Menu_icon">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:RepoExplorer.Properties.Resources.password">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:RepoExplorer.Properties.Resources.sub_menu">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="P:RepoExplorer.Properties.Resources.username">
+            <summary>
+              Looks up a localized resource of type System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="T:RepoExplorer.RepoInfo">
+            <summary>
+            Static values
+            </summary>
+        </member>
+        <member name="F:RepoExplorer.RepoInfo.RepositoryListUrl">
+            <summary>
+            Repository list url
+            </summary>
+        </member>
+        <member name="F:RepoExplorer.RepoInfo.RepositoryObjUrl">
+            <summary>
+            Repository object url
+            </summary>
+        </member>
+        <member name="F:RepoExplorer.RepoInfo.RegisterClientApiUrl">
+            <summary>
+            Register client url
+            </summary>
+        </member>
+        <member name="F:RepoExplorer.RepoInfo.RepoListUrl">
+            <summary>
+            Repository list url for login to worker
+            </summary>
+        </member>
+        <member name="F:RepoExplorer.RepoInfo.RepoObjUrl">
+            <summary>
+            Repository object url for login to worker
+            </summary>
+        </member>
+        <member name="P:RepoExplorer.RepoInfo.InputPortNumber">
+            <summary>
+            Gets or sets input port number
+            </summary>
+        </member>
+    </members>
+</doc>
